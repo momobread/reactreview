@@ -1,24 +1,38 @@
 import styled from "styled-components"
+import Homepage from "./pages/homePage";
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import Counter from "./pages/counter";
+
 //APP : 사용자가 만든 새로운 컴포넌트
 
 
 function App() {
   return (
  
-   <A>
-
-    <h1>안녕</h1>
-    <h2>안녕2</h2>
-  </A>
+   <BrowserRouter>
+    <Routes>
+      <Route path ='/sieun' element={<Homepage/>}/>
+      <Route path ='/counter' element={<Counter/>}/>
+    </Routes>
+   </BrowserRouter>
   );
 }
 
 export default App;
 
 
-const A=styled.h1`
+const B = styled.h2`
+  background-color: red;
+`
+
+
+const A = styled.h1`
   background-color : yellow;
   color: black;
-  display
-  ali
+  align-items: center;
 `
+
+
+
+
+
